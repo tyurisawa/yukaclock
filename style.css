@@ -1,0 +1,304 @@
+body{
+  font-family: Arial, 'メイリオ', sans-serif;
+  text-align: center;
+}
+.anaclo{
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .anaclo-frame-1{
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    border-width:8px;
+    border-color: #000;
+    border-style:  double;
+    border-radius: 50%;
+  }
+  .anaclo-frame-1::before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+  .anaclo-frame-2{
+    z-index: -10;
+    margin-top: -100%;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-width:8px;
+    border-color: #0a91ff;
+    border-style:  solid;
+    border-radius: 50%;
+  }
+  .anaclo-hand{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: left;
+    transform: translateY(-50%);
+    background-color: #333;
+  }
+  #anaclo-hour{
+    width: 25%;
+    height: 12px;
+    background-color: #0a91ff;
+  }
+  #anaclo-minute{
+    width: 40%;
+    height: 8px;
+  }
+  #anaclo-second{
+    left: 45%;
+    transform-origin: 10% 0;
+    width: 50%;
+    height: 1px;
+  }
+  .anaclo-center{
+    transform: translate(-50%,-50%);
+    width: 3%;
+    height: 3%;
+    border: 3px solid #333;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  
+/*ハンバーガーメニューのオブジェクト*/
+.icon-item{
+  height: 5px;
+  width: 40px;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  transition: all 0.5s ease;
+}
+.icon-wrapper{
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  cursor:pointer;
+  z-index: 1;
+  position: fixed;
+  cursor: pointer;
+  left: 10px;
+  top: 10px;
+}
+.show-animate .line1{
+  transform: translateY(20px) rotate(45deg);
+  background-color: aliceblue;
+}
+.show-animate .line2{
+  opacity: 0;
+  transform: translateX(50%) rotate(45deg);
+  background-color: aliceblue;
+}
+.show-animate .line3{
+  transform: translateY(20px) rotate(45deg);
+  background-color: aliceblue;
+}
+.back{
+  left: 0px;
+  opacity: 1;
+  position: fixed;
+  top: -2000px;
+  height: 2000px;
+  width: 150px;
+  background-color: #0a91ff;
+  transition: 0.5s;
+}
+.show-animate .back{
+  opacity: 1;
+  top: 0%;
+}
+.line1 {
+	background-color: #000;
+}
+.line2 {
+	background-color: #0a91ff;
+}
+.line3 {
+	background-color: #000;
+}
+/*メニュー欄のカスタム*/
+
+.menu-list {
+  text-align: left;
+  position: absolute;
+  top: 300px;
+}
+
+.menu1{
+  z-index: 3;
+  margin-top: -180px;
+  position: fixed;
+  background-color: #25CED1;
+  height: 5px;
+  width: 1000px;
+  left: -1000px;
+  transition: all 0.5s ease;
+}
+.menu1 h4{
+  font-size: 18px;
+  position: fixed;
+  margin-top: -20px;
+  color: white;
+}
+.menu1 a{
+  position: fixed;
+  margin-top: -15px;
+  color: aliceblue;
+}
+.show-animate .menu1{
+  left: 10px;
+  width: 80px;
+}
+
+.menu2{
+  z-index: 3;
+  margin-top: -145px;
+  position: fixed;
+  background-color: #fc2626;
+  height: 5px;
+  width: 1000px;
+  left: -1000px;
+  transition: all 0.5s ease;
+}
+.menu2 a{
+  position: fixed;
+  margin-top: -15px;
+  color: aliceblue;
+}
+.show-animate .menu2{
+  left: 10px;
+  width: 105px;
+}
+
+.menu3{
+  z-index: 3;
+  margin-top: -110px;
+  position: fixed;
+  background-color: #26a8ff;
+  height: 5px;
+  width: 1000px;
+  left: -1000px;
+  transition: all 0.5s ease;
+}
+.menu3 a{
+  position: fixed;
+  margin-top: -15px;
+  color: aliceblue;
+}
+.show-animate .menu3{
+  left: 10px;
+  width: 90px;
+}
+
+.menu4{
+  z-index: 3;
+  margin-top: -75px;
+  position: fixed;
+  background-color: #fc2626;
+  height: 5px;
+  width: 1000px;
+  left: -1000px;
+  transition: all 0.5s ease;
+}
+.menu4 a{
+  position: fixed;
+  margin-top: -15px;
+  color: aliceblue;
+}
+.show-animate .menu4{
+  left: 10px;
+  width: 115px;
+}
+
+.menu5{
+  z-index: 3;
+  margin-top: -40px;
+  position: fixed;
+  background-color: #25CED1;
+  height: 5px;
+  width: 1000px;
+  left: -1000px;
+  transition: all 0.5s ease;
+}
+.menu5 a{
+  position: fixed;
+  margin-top: -15px;
+  color: aliceblue;
+}
+.show-animate .menu5{
+  left: 10px;
+  width: 115px;
+}
+
+a{
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.MSSlogo{
+  position: absolute;
+  top: -10px;
+  right: 0;
+}
+
+#jsalarm_ct {
+  color: #00aaff;
+  font-size: 10vw;
+  margin: 30px auto;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+p {
+  font-size: 20px;
+}
+
+select {
+  font-size: 18px;
+  padding: 3px;
+}
+
+.btn{
+  height: 30px;
+  margin-left: 5px;
+  display: inline-block;
+  font-weight: bold;
+  width: 60px;
+  padding: 0.5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 #CDC9C9;
+  background: #EEE9E9;
+  cursor: pointer;
+}
+
+.delete_btn {
+  margin-left: 15px;
+  font-weight: bold;
+  width: 60px;
+  padding: 3px;
+  border-radius: 5px;
+  background: #FF4500;
+  box-shadow: 0 2px 0 red;
+  cursor: pointer;
+  color: #fff;
+}
+
+.container {
+  text-align: left;
+  padding: 15px;
+  margin: 0 auto;
+  background: #e0e0e0;
+  width: 70vw;
+  height: 190px;
+}
+.container p {
+  font-size: 16px;
+  margin: 5px;
+
+}
+
+.container li{
+  margin-bottom: 7px; 
+}

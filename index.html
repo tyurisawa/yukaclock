@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ユウカちゃん目覚まし時計</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.12/push.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" defer></script>
+    <meta name="google-signin-client_id" content="1022165934306-of2fj90p7sfmgp276thgfc9f7p2dcvh4.apps.googleusercontent.com">
+</head>
+<body>
+  <h2>ユウカちゃん目覚まし時計</h2>
+    <div class="anaclo">
+    <div class="anaclo-frame-1"></div>
+    <div class="anaclo-frame-2"></div>
+    <div id="anaclo-hour" class="anaclo-hand"></div>
+    <div id="anaclo-minute" class="anaclo-hand"></div>
+    <div id="anaclo-second" class="anaclo-hand"></div>
+    <div class="anaclo-hand anaclo-center"></div>
+  </div>
+  <div class="icon-wrapper">
+      <div class="back"></div>
+      <div class="icon-item line1"></div>
+      <div class="icon-item line2"></div>
+      <div class="icon-item line3"></div>
+  </div>
+  <div class="menu-list">
+      <div class="menu1" >
+          <a href="https://bluearchive.jp/">公式サイト</a>
+      </div>
+      <div class="menu2">
+          <a href="https://www.youtube.com/@-bluearchive-1776">公式YouTube</a>
+      </div>
+      <div class="menu3">
+  <a href="https://twitter.com/Blue_ArchiveJP">公式Twitter</a>
+      </div>
+      <div class="menu4">
+          <a href="https://www.youtube.com/shorts/Vm9OCnUtH5U">元になった動画</a>
+      </div>
+      <div class="menu5">
+          <a href="#">ユウカタイマー</a>
+      </div>
+  </div>
+  <img class="MSSlogo" src="/img/MSSlogo.png" alt="MSSlogo" width="80px">
+
+  <form action="" method="" name="alarm_form">
+        <p>
+    
+            <div id='timerText'>0:00:00</div>
+            <form name="alarm_form">
+                <p>アラーム: <select name ='option_hours'>
+                    <option value='0' >00</option>
+                    <option value='1' >01</option>
+                    <option value='2' >02</option>
+                    <option value='3' >03</option>
+                    <option value='4' >04</option>
+                    <option value='5' >05</option>
+                    <option value='6' >06</option>
+                    <option value='7' >07</option>
+                    <option value='8' >08</option>
+                    <option value='9' >09</option>
+                    <option value='10'>10</option>
+                    <option value='11'>11</option>
+                    <option value='12'>12</option>
+                    <option value='13'>13</option>
+                    <option value='14'>14</option>
+                    <option value='15'>15</option>
+                    <option value='16'>16</option>
+                    <option value='17'>17</option>
+                    <option value='18'>18</option>
+                    <option value='19'>19</option>
+                    <option value='20'>20</option>
+                    <option value='21'>21</option>
+                    <option value='22'>22</option>
+                    <option value='23'>23</option>
+                </select>
+                <select name ='option_minutes'>
+                    <option value='0' >00</option>
+                    <option value='1' >01</option>
+                    <option value='2' >02</option>
+                    <option value='3' >03</option>
+                    <option value='4' >04</option>
+                    <option value='5' >05</option>
+                    <option value='6' >06</option>
+                    <option value='7' >07</option>
+                    <option value='8' >08</option>
+                    <option value='9' >09</option>
+                    <option value='10'>10</option>
+                    <option value='11'>11</option>
+                    <option value='12'>12</option>
+                    <option value='13'>13</option>
+                    <option value='14'>14</option>
+                    <option value='15'>15</option>
+                    <option value='16'>16</option>
+                    <option value='17'>17</option>
+                    <option value='18'>18</option>
+                    <option value='19'>19</option>
+                    <option value='20'>20</option>
+                    <option value='21'>21</option>
+                    <option value='22'>22</option>
+                    <option value='23'>23</option>
+                    <option value='24'>24</option>
+                    <option value='25'>25</option>
+                    <option value='26'>26</option>
+                    <option value='27'>27</option>
+                    <option value='28'>28</option>
+                    <option value='29'>29</option>
+                    <option value='30'>30</option>
+                    <option value='31'>31</option>
+                    <option value='32'>32</option>
+                    <option value='33'>33</option>
+                    <option value='34'>34</option>
+                    <option value='35'>35</option>
+                    <option value='36'>36</option>
+                    <option value='37'>37</option>
+                    <option value='38'>38</option>
+                    <option value='39'>39</option>
+                    <option value='40'>40</option>
+                    <option value='41'>41</option>
+                    <option value='42'>42</option>
+                    <option value='43'>43</option>
+                    <option value='44'>44</option>
+                    <option value='45'>45</option>
+                    <option value='46'>46</option>
+                    <option value='47'>47</option>
+                    <option value='48'>48</option>
+                    <option value='49'>49</option>
+                    <option value='50'>50</option>
+                    <option value='51'>51</option>
+                    <option value='52'>52</option>
+                    <option value='53'>53</option>
+                    <option value='54'>54</option>
+                    <option value='55'>55</option>
+                    <option value='56'>56</option>
+                    <option value='57'>57</option>
+                    <option value='58'>58</option>
+                    <option value='59'>59</option>
+                </select> <span class="btn" id="set_btn">設定</span></p></form>
+
+  <div class="container">
+      <p>アラーム設定時刻</p>
+      <ul id="parent_list">
+      </ul>
+   </body>
+  </html>
+  
+  </div><input type="button" id="push" onclick="return push()" value="クリックするとプッシュ通知が送られます">
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+</body>
+</html>
